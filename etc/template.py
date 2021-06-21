@@ -6,3 +6,5 @@
  
 #Start script
 if name == 'main':
+    pass
+    
