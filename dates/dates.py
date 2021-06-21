@@ -17,7 +17,7 @@ def yesterday():
 
 
 def today():
-    """Get today's date"""
+    """Get today's date and time of now"""
     now = datetime.datetime.now()
     current_year = str(now.year)
     if now.month < 10:
@@ -28,7 +28,21 @@ def today():
         current_day = "0" + str(now.day)
     else:
         current_day = str(now.day)
-    return current_year, current_month, current_day
+    if now.hour < 10:
+        hour = "0" + str(now.hour)
+    else:
+        hour = str(now.hour)
+    if now.minute < 10:
+        minute = "0" + str(now.minute)
+    else:
+        minute = str(now.minute)
+    if now.second < 10:
+        second = "0" + str(now.second)
+    else:
+        second = str(now.second)
+    time = "{}-{}-{}".format(hour, minute, second)   
+        
+    return current_year, current_month, current_day, time
 
 
 def tommorow():
