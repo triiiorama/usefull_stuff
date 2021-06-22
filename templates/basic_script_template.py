@@ -5,6 +5,6 @@
         python script!"""
  
 #Start script
-if name == 'main':
+if __name__ == '__main__':
     pass
     
