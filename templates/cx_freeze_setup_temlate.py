@@ -11,8 +11,8 @@ class Executable(object):
                  shortcutDir = None, copyright = None, trademarks = None):
 """
 
-executables = [Executable('example.py',
-                          targetName='hello_wx.exe',
+executables = [Executable('main.py',
+                          targetName='my_app.exe',
                           # Для GUI по умолчанию console (т.ж. "Win32GUI" и "Win32Service")
                           base='Win32GUI',
                           icon='example.ico')]
@@ -38,14 +38,14 @@ options = {
         'includes': includes,
         'zip_include_packages': zip_include_packages,
         # Имя папки куда будет помещена сборка
-        'build_exe': 'build_windows',
+        'build_exe': 'my_app_dir',
         'include_files': include_files,
     }
 }
 
 # Параметры описывающие сборку
-setup(name='hello_world',
-      version='0.0.12',
-      description='My Hello World App!',
+setup(name='my_app',
+      version='0.1',
+      description='My App!',
       executables=executables,
       options=options)

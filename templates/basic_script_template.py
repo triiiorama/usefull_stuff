@@ -4,7 +4,7 @@
 """This is my
         python script!"""
  
-#Start script
+# Start script
+
 if __name__ == '__main__':
     pass
-    

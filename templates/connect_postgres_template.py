@@ -12,6 +12,7 @@ connection = psycopg2.connect(host = db_host,
                               dbname = db_name,
                               user = db_user, 
                               password = db_password)
+                              
 if __name__ == '__main__':
     connection = bool(connection)
     print(connection)
